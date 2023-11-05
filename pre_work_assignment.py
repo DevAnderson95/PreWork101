@@ -18,7 +18,7 @@ first_odds('num')
 
 def max_num_in_list(a_list):
     """Return the max number of the list provided."""
-    a_list = [3,6,9,18,36,72,144,288,476]
+    a_list = [3,6,9,18,36,72,144,288,476,555,777]
     for max_int in a_list:
         max_int = max(a_list)
         
@@ -29,13 +29,18 @@ max_num_in_list('max_int')
 def is_leap_year(a_year):
     """Return a true or false statement if given year is a leap year."""
     a_year = int(a_year)               
-    if a_year % 4 == 0: 
-        bool(True)
+    if a_year % 100 == 0: 
+        a_year = bool(False)
+    elif a_year % 400 == 0:
+        a_year = bool(True)
+    elif a_year % 4 == 0:
+        a_year = bool(True)
     else:
-        bool(False)
-    
-    return bool(a_year)       
-print(is_leap_year(2020))
+        a_year = bool(False) 
+
+    return(bool(a_year))
+          
+print(is_leap_year(200))
 
 
 def is_consecutive(a_list):
